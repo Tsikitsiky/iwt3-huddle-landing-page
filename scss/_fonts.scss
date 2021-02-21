@@ -1,0 +1,61 @@
+$font-face: 
+(
+    name: "Open Sans Regular",
+    system-name: "Open-Sans-Regular",
+    family: "Open Sans",
+    weight: 400,
+    style: normal,
+    file: "opensans-regular-webfont"
+  ),
+  (
+    name: "Open Sans Bold",
+    system-name: "Open-Sans-Bold",
+    family: "Open Sans",
+    weight: 700,
+    style: normal,
+    file: 'oppensans-bold-webfont'
+  ),
+(
+    name: "Poppins",
+    system-name: "Poppins",
+    style: normal,
+    family: "Poppins",
+    weight: 700,
+    file: "poppins_700"
+),
+(
+    name: "Poppins",
+    system-name: "Poppins",
+    style: normal,
+    family: "Poppins",
+    weight: 500,
+    file: "poppins_500"
+),
+(
+    name: "Poppins",
+    system-name: "Poppins",
+    style: normal,
+    family: "Poppins",
+    weight: 400,
+    file: "poppins_400"
+),
+(
+    name: "Poppins",
+    system-name: "Poppins",
+    style: normal,
+    family: "Poppins",
+    weight: 300,
+    file: "poppins_300"
+);
+
+@each $font in $font-face {
+    @font-face {
+        font-family: map-get($font , family );
+        font-weight: map-get($font, weight );
+        font-style: map-get($font, style );
+        src: local( map-get($font, name)),
+             local( map-get($font, system-name)),
+            url('../fonts/#{map-get($font, file)}.woff2') format('woff2'),
+            url('../fonts/#{map-get($font, file)}.woff') format('woff');
+    }
+}

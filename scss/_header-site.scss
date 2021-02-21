@@ -1,0 +1,17 @@
+.header-site__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a > img {
+        width: 120px;
+    }
+
+    .try-free {
+        padding: 0.5rem 1rem;
+        color: $light-pink;
+        border: 1px solid $light-pink;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+}

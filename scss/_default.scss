@@ -1,3 +1,19 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
+
+.btn {
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+}
+
+h2,
+h3 {
+    color: $very-dark-cyan;
+}
+
+@function image($filename) {
+    @return url('../images/#{$filename}');
+  }
