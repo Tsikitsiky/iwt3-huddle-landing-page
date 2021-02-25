@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1240px;
+    @media(min-width: 376px) {
+        margin: 0 auto;
+    }
 
     a > img {
         width: 120px;

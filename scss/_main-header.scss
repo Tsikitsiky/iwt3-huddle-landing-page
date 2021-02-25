@@ -5,10 +5,18 @@
     .main-header__heading {
         font-size: 2rem;
         text-transform: capitalize;
+        @media (min-width: 1000px) {
+            font-size: 46px;
+        }
     }
 
     .main-header__text {
         color: $very-dark-cyan;
+        @media (min-width: 500px) {
+            max-width: 550px;
+            font-size: 18px;
+            margin: 0 auto;
+        }
     }
 
     .get-started {
@@ -17,7 +25,7 @@
         border: none;
         border-radius: 20px;
         background-color: $pink;
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
         margin-top: 30px;
     }
 }

@@ -11,16 +11,34 @@
         height: 50px;
         background-image: image('bg-footer-top-mobile.svg');
         background-repeat: no-repeat;
+
+        @media (min-width: 400px) {
+            top: -150px;
+            height: 150px;
+            background-image: image('bg-footer-top-desktop.svg');
+        }
     }
+
+    @media (min-width: 400px) {
+        margin-top: 200px;
+    }
+
 }
 
 .footer-site__container {
     color: rgba($color: #fff, $alpha: 0.8);
-    padding: 50px 0;
+    padding-block: 50px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     gap: 100px;
+
+    @media (min-width: 400px) {
+        flex-direction: row;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+   
 
     .contact__text {
         margin-bottom: 2rem;
@@ -91,11 +109,19 @@
         flex-direction: column;
         gap: 1rem;
 
+        @media (min-width: 800px) {
+            flex-direction: row;
+            width: 100%;
+        }
+
         input {
             outline: none;
             border: none;
             padding: 1rem;
             border-radius: 5px;
+            @media (min-width: 800px) {
+                width: 60%;
+            }
         }
         button {
             align-self: flex-end;
@@ -110,5 +136,12 @@
 
     a > img {
         width: 170px;
+    }
+
+    @media (min-width: 400px) {
+        .contact__text, 
+        .subscribe__text {
+            max-width: 400px;
+        }
     }
 }
